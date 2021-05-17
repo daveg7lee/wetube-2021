@@ -5,9 +5,9 @@ dotenv.config();
 
 const app = fastify({ logger: true });
 
-app.get('/', async (request, reply) => {
-  return { hello: 'world' };
-});
+const handleHome = () => console.log('Somebody is trying to go home.');
+
+app.get('/', handleHome);
 
 const start = async () => {
   try {
